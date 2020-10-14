@@ -16,7 +16,7 @@ This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
   </Product>
  </Order>
  ```
-**XPath to get the `Price` of the `Latte Expresso`**
+**XPath to get the `Price` of the `Latte Expresso` product**
 ```
 xpath(variables('Order'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
 ```
