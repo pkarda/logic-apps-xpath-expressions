@@ -18,5 +18,5 @@ This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
  ```
 **XPath to get the `Price` of the `Latte Expresso`**
 ```
-xpath(variables('UniversalShipment'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
+xpath(variables('Order'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
 ```
