@@ -3,6 +3,20 @@
 This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
 
 ## String operations
+**Sample XML**
+```xml
+<Order>
+  <Product>
+    <Description>Espresso</Description>
+    <Price>1.50</Price>
+  </Product>
+  <Product>
+    <Description>Latte Espresso</Description>
+    <Price>2.50</Price>
+  </Product>
+ </Order>
+ ```
+**XPath to get the `Price` of the `Latte Expresso`**
 ```
-xpath(variables('UniversalShipment'), 'string(/*[local-name()="UniversalShipment"]/*[local-name()="Shipment"]/*[local-name()="MilestoneCollection"]/*[local-name()="Milestone"][*[local-name()="Description" and text() ="Origin Cargo Receive"]]/*[local-name()="ActualDate"])')
+xpath(variables('UniversalShipment'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
 ```
