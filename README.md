@@ -2,10 +2,7 @@
 
 This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
 
-## Gettings string value
-
-## Getting Boolean value
-
-## Filter conditions
-
-## Counts
+## String operations
+```
+xpath(variables('UniversalShipment'), 'string(/*[local-name()="UniversalShipment"]/*[local-name()="Shipment"]/*[local-name()="MilestoneCollection"]/*[local-name()="Milestone"][*[local-name()="Description" and text() ="Origin Cargo Receive"]]/*[local-name()="ActualDate"])')
+```
