@@ -9,10 +9,17 @@ This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
   <Product>
     <Description>Espresso</Description>
     <Price>1.50</Price>
+    <Size>S</Size>
+  </Product>
+    <Product>
+    <Description>Double Espresso</Description>
+    <Price>3.00</Price>
+    <Size>M</Size>
   </Product>
   <Product>
     <Description>Latte Espresso</Description>
     <Price>2.50</Price>
+    <Size>M</Size>
   </Product>
  </Order>
  ```
@@ -20,3 +27,4 @@ This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
 ```
 xpath(variables('Order'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
 ```
+
