@@ -40,7 +40,7 @@ xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Produc
 ```
 xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Size" text()="M"])')
 ```
-**XPath to get a *count* of the *products* with `Size` defined (not empty)**
+**XPath to get a *count* of the *products* with `Size` not empty**
 ```
 xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Size"]/text())')
 ```
