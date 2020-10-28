@@ -32,7 +32,7 @@ This cheat-sheet contains various Xpath expressions used in Azure Logic Apps.
 ```
 xpath(variables('Order'), 'string(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Description" and text()="Latte Espresso"]]/*[local-name()="Price"])')
 ```
-**XPath to get a *count* of all the *products**
+**XPath to get a *count* of all the *products***
 ```
 xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Product"])')
 ```
@@ -44,4 +44,3 @@ xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Produc
 ```
 xpath(variables('Order'), 'count(/*[local-name()="Order"]/*[local-name()="Product"][*[local-name()="Size"]/text())')
 ```
-
